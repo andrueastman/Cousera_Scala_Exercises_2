@@ -1,53 +1,5 @@
 [0m[[0minfo[0m] [0m[32mBalanceSuite:[0m[0m
-[0m[[0minfo[0m] [0m[31m- balance: '(if (zero? x) max (/ 1 x))' is balanced *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.Main$.balance(Main.scala:23)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.BalanceSuite$$anonfun$1.apply$mcV$sp(BalanceSuite.scala:14)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.BalanceSuite$$anonfun$1.apply(BalanceSuite.scala:14)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.BalanceSuite$$anonfun$1.apply(BalanceSuite.scala:14)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
-[0m[[0minfo[0m] [0m[31m- balance: 'I told him ...' is balanced *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.Main$.balance(Main.scala:23)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.BalanceSuite$$anonfun$2.apply$mcV$sp(BalanceSuite.scala:18)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.BalanceSuite$$anonfun$2.apply(BalanceSuite.scala:18)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.BalanceSuite$$anonfun$2.apply(BalanceSuite.scala:18)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
-[0m[[0minfo[0m] [0m[31m- balance: ':-)' is unbalanced *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.Main$.balance(Main.scala:23)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.BalanceSuite$$anonfun$3.apply$mcV$sp(BalanceSuite.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.BalanceSuite$$anonfun$3.apply(BalanceSuite.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.BalanceSuite$$anonfun$3.apply(BalanceSuite.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
-[0m[[0minfo[0m] [0m[31m- balance: counting is not enough *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.Main$.balance(Main.scala:23)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.BalanceSuite$$anonfun$4.apply$mcV$sp(BalanceSuite.scala:26)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.BalanceSuite$$anonfun$4.apply(BalanceSuite.scala:26)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at recfun.BalanceSuite$$anonfun$4.apply(BalanceSuite.scala:26)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[32m- balance: '(if (zero? x) max (/ 1 x))' is balanced[0m[0m
+[0m[[0minfo[0m] [0m[32m- balance: 'I told him ...' is balanced[0m[0m
+[0m[[0minfo[0m] [0m[32m- balance: ':-)' is unbalanced[0m[0m
+[0m[[0minfo[0m] [0m[32m- balance: counting is not enough[0m[0m

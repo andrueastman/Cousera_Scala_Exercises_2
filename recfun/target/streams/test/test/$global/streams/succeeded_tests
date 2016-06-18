@@ -1,3 +1,5 @@
 #Successful Tests
-#Sat Jun 11 12:45:38 EAT 2016
-recfun.PascalSuite=1465638338489
+#Sat Jun 11 12:52:21 EAT 2016
+recfun.PascalSuite=1465638741016
+recfun.BalanceSuite=1465638741016
+recfun.CountChangeSuite=1465638741016
