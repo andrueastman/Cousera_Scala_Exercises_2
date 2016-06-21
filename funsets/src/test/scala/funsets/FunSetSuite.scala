@@ -110,5 +110,51 @@ class FunSetSuite extends FunSuite {
     }
   }
 
+  test("Intesection of sets") {
+    new TestSets {
+      val s = intersect(s1, s2)
+      val s12 = intersect(s1, s1)
+      assert(!contains(s, 1), "Intersect 1")
+      assert(!contains(s, 2), "Intersect 2")
+      assert(contains(s12, 1),"Intersect 3")
+    }
+  }
+  
+  test("Difference of sets") {
+    new TestSets {
+      val s = union(s1, s2)
+      val s12 = diff(s, s1)
+      assert(!contains(s12, 1), "Intersect 1")
+      assert(!contains(s12, 3), "Intersect 2")
+      assert(contains(s12, 2),"Intersect 3")
+    }
+  }
+  
+  test("Filters") {
+    new TestSets {
+      val s = union(s1, s2)
+      val s32 = filter(s, s2)
+      assert(!contains(s32, 1), "Intersect 2")
+      assert(contains(s32, 2),"Intersect 3")
+    }
+  }
+  
+  test("forall positive numbers") {
+    new TestSets {
+      val s = union(s1, union(s2,s3))
+      assert(forall(s, x => x > 0), "forall positive")
+    }
+  }
 
+  test("exists at least a number greater than 1") {
+    new TestSets {
+      assert(exists(union(s1,s2), x => x > 1), "exists greater 1")
+    }
+  }
+
+  test("map multiplying by 3") {
+    new TestSets {
+      assert(contains(map(s3, x => x * 3), 9), "map multiplying by 3 set s3")
+    }
+  }
 }

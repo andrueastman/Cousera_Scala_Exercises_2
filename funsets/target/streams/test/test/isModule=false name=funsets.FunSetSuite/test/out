@@ -1,0 +1,10 @@
+[0m[[0minfo[0m] [0m[32mFunSetSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- contains is implemented[0m[0m
+[0m[[0minfo[0m] [0m[32m- singletonSet(1) contains 1[0m[0m
+[0m[[0minfo[0m] [0m[32m- union contains all elements of each set[0m[0m
+[0m[[0minfo[0m] [0m[32m- Intesection of sets[0m[0m
+[0m[[0minfo[0m] [0m[32m- Difference of sets[0m[0m
+[0m[[0minfo[0m] [0m[32m- Filters[0m[0m
+[0m[[0minfo[0m] [0m[32m- forall positive numbers[0m[0m
+[0m[[0minfo[0m] [0m[32m- exists at least a number greater than 1[0m[0m
+[0m[[0minfo[0m] [0m[32m- map multiplying by 3[0m[0m
