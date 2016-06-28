@@ -1,0 +1,20 @@
+[0m[[0minfo[0m] [0m[32mTweetSetSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- filter: on empty set[0m[0m
+[0m[[0minfo[0m] [0m[32m- filter: a on set5[0m[0m
+[0m[[0minfo[0m] [0m[32m- filter: 20 on set5[0m[0m
+[0m[[0minfo[0m] [0m[32m- union: set4c and set4d[0m[0m
+[0m[[0minfo[0m] [0m[32m- union: with empty set (1)[0m[0m
+[0m[[0minfo[0m] [0m[32m- union: with empty set (2)[0m[0m
+[0m[[0minfo[0m] [0m[31m- descending: set5 *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at objsets.TweetSet.descendingByRetweet(TweetSet.scala:79)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at objsets.TweetSetSuite$$anonfun$7$$anon$7.<init>(TweetSetSuite.scala:68)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at objsets.TweetSetSuite$$anonfun$7.apply$mcV$sp(TweetSetSuite.scala:67)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at objsets.TweetSetSuite$$anonfun$7.apply(TweetSetSuite.scala:67)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at objsets.TweetSetSuite$$anonfun$7.apply(TweetSetSuite.scala:67)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
