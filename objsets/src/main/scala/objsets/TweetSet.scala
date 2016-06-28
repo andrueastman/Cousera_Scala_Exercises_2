@@ -65,7 +65,7 @@ abstract class TweetSet {
    * Question: Should we implment this method here, or should it remain abstract
    * and be implemented in the subclasses?
    */
-    def mostRetweeted: Tweet = ???
+    def mostRetweeted: Tweet 
   
   /**
    * Returns a list containing all tweets of this set, sorted by retweet count
@@ -76,7 +76,9 @@ abstract class TweetSet {
    * Question: Should we implment this method here, or should it remain abstract
    * and be implemented in the subclasses?
    */
-    def descendingByRetweet: TweetList = ???
+    def descendingByRetweet: TweetList
+    
+    def empty:Boolean
   
   /**
    * The following methods are already implemented
@@ -108,10 +110,14 @@ abstract class TweetSet {
 
 class Empty extends TweetSet {
   
+  def descendingByRetweet: TweetList= Nil
+  
+  def empty= true
   
   def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet = acc //same as returning empty
     
     def union(that: TweetSet): TweetSet = that
+    def mostRetweeted = throw new java.util.NoSuchElementException
   
   /**
    * The following methods are already implemented
@@ -128,6 +134,22 @@ class Empty extends TweetSet {
 
 class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
   
+    def descendingByRetweet: TweetList= new Cons(mostRetweeted, remove(mostRetweeted).descendingByRetweet)
+    def empty=false
+    def mostRetweeted = {
+      lazy val leftMost = left.mostRetweeted
+  		lazy val rightMost = right.mostRetweeted
+  
+  		if( !left.empty && leftMost.retweets > elem.retweets )
+  			if( !right.empty && rightMost.retweets > leftMost.retweets )
+  				rightMost
+  			else
+  				leftMost
+  		else if( !right.empty && rightMost.retweets > elem.retweets )
+  			rightMost
+  		else
+  			elem
+    }
 
     def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet = {
        if(p(elem)) left.filterAcc(p, right.filterAcc(p, acc.incl(elem)))
