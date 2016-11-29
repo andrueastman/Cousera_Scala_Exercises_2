@@ -24,9 +24,15 @@ object Huffman {
   
 
   // Part 1: Basics
-    def weight(tree: CodeTree): Int = ??? // tree match ...
+    def weight(tree: CodeTree): Int = tree match {
+      case Fork(left: CodeTree, right: CodeTree, chars: List[Char], weight: Int) => weight
+      case Leaf(char: Char, weight: Int) => weight
+    }
   
-    def chars(tree: CodeTree): List[Char] = ??? // tree match ...
+    def chars(tree: CodeTree): List[Char] = tree match {
+      case Fork(left: CodeTree, right: CodeTree, chars: List[Char], weight: Int) => chars
+      case Leaf(char: Char, weight: Int) => List(char)
+    }
   
   def makeCodeTree(left: CodeTree, right: CodeTree) =
     Fork(left, right, chars(left) ::: chars(right), weight(left) + weight(right))
@@ -69,7 +75,13 @@ object Huffman {
    *       println("integer is  : "+ theInt)
    *   }
    */
-    def times(chars: List[Char]): List[(Char, Int)] = ???
+    def times(chars: List[Char]): List[(Char, Int)] = {
+      def times0(ch: List[Char],acc:List[(Char, Int)]):List[(Char, Int)] = ch match{
+        case Nil => acc
+        case x :: xs => times0(xs.filter(_!= x), (x,ch.count(_ == x)) :: acc) 
+      } 
+      times0(chars,List())
+    }
   
   /**
    * Returns a list of `Leaf` nodes for a given frequency table `freqs`.
@@ -78,12 +90,12 @@ object Huffman {
    * head of the list should have the smallest weight), where the weight
    * of a leaf is the frequency of the character.
    */
-    def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = ???
+    def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = freqs.sortBy(_._2).map(p => Leaf(p._1, p._2))
   
   /**
    * Checks whether the list `trees` contains only one single code tree.
    */
-    def singleton(trees: List[CodeTree]): Boolean = ???
+    def singleton(trees: List[CodeTree]): Boolean = (trees.length==1)
   
   /**
    * The parameter `trees` of this function is a list of code trees ordered
@@ -97,7 +109,11 @@ object Huffman {
    * If `trees` is a list of less than two elements, that list should be returned
    * unchanged.
    */
-    def combine(trees: List[CodeTree]): List[CodeTree] = ???
+    def combine(trees: List[CodeTree]): List[CodeTree] = trees match {
+      case Nil => trees
+      case x :: Nil => trees
+      case a :: b :: xs => (makeCodeTree(a,b):: xs).sortBy(weight) 
+    }
   
   /**
    * This function will be called in the following way:
